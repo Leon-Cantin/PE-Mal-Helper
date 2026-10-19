@@ -1,0 +1,25 @@
+[package]
+name = "bcrypt_impl"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "bcrypt_impl.rs"
+
+[dependencies]
+paste = "1.0.15"
+
+[dependencies.windows-sys]
+version = "0.61.2"
+features = [
+    "Wdk_Foundation",
+    "Win32_Security_Cryptography",
+    ]
+
+[dependencies.strobf]
+path="../../libs/strobf"
+
+[dependencies.ld]
+path="../../libs/ld"
+
+

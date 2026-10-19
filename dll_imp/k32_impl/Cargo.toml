@@ -1,0 +1,23 @@
+[package]
+name = "k32_impl"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "k32_impl.rs"
+
+[dependencies]
+paste = "1.0.15"
+
+[dependencies.windows-sys]
+version = "0.61.2"
+features = [
+    "Win32_System_Threading",
+    "Wdk_Foundation",
+    ]
+
+[dependencies.strobf]
+path="../../libs/strobf"
+
+[dependencies.ld]
+path="../../libs/ld"

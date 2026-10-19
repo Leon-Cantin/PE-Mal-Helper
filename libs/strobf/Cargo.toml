@@ -1,0 +1,26 @@
+[package]
+name = "strobf"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "strobf.rs"
+
+[dependencies]
+
+[dependencies.widestring]
+version = "1.2.1"
+
+[features]
+default = ["tobf_djb2"]
+tobf_djb2 = []
+tobf_raw = []
+
+verbose_errors = []
+verbose_info = []
+verbose_debug = []
+
+max_verbose_off   = []
+max_verbose_error = [ "verbose_errors" ]
+max_verbose_info  = [ "verbose_errors","verbose_info" ]
+max_verbose_debug = [ "verbose_errors","verbose_info","verbose_debug" ]

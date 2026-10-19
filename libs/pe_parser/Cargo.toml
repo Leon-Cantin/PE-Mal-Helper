@@ -1,0 +1,20 @@
+[package]
+name = "pe_parser"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[lib]
+path = "pe_parser.rs"
+
+[dependencies.windows-sys]
+version = "0.61.2"
+features = [
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_SystemServices",
+    "Win32_System_SystemInformation",
+    ]
+
+[dependencies.strobf]
+path="../strobf"

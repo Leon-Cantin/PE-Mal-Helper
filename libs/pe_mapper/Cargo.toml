@@ -1,0 +1,35 @@
+[package]
+name = "pe_mapper"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "pe_mapper.rs"
+
+[dependencies]
+
+[dependencies.windows-sys]
+version = "0.61.2"
+features = [
+    "Win32_Storage_FileSystem",
+    "Win32_Security",
+    "Win32_System_IO",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_SystemInformation",
+    "Win32_System_SystemServices",
+    "Win32_System_Memory",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Kernel",
+    ]
+
+[dependencies.pe_parser]
+path="../pe_parser"
+
+[dependencies.ld]
+path="../ld"
+
+[dependencies.strobf]
+path="../strobf"
+
+[dependencies.nt_impl]
+path="../../dll_imp/nt_impl"

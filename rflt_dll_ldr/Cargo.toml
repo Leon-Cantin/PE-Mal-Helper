@@ -1,0 +1,32 @@
+[package]
+name = "rflt_dll_ldr"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[dependencies.windows-sys]
+version = "0.61.2"
+features = [
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_SystemServices",
+    "Win32_System_SystemInformation",
+    "Wdk_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+
+
+    "Win32_System_WindowsProgramming",
+    ]
+
+[dependencies.pe_mapper]
+path="../libs/pe_mapper"
+[dependencies.pe_parser]
+path="../libs/pe_parser"
+
+[dependencies.ld]
+path="../libs/ld"
+[dependencies.nt_impl]
+path="../dll_imp/nt_impl"
+
+[dependencies.widestring]
+version = "1.2.1"

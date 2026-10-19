@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = [
+    "rflt_dll", 
+    "rflt_dll_ldr",
+    "dll_imp/bcrypt_impl", 
+    "dll_imp/k32_impl", 
+    "dll_imp/nt_impl", 
+    "libs/ld", 
+    "libs/pe_mapper", 
+    "libs/pe_parser",
+    "libs/strobf",
+    "libs/crypt",   
+    ]
